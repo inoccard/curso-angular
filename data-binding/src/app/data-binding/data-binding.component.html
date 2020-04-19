@@ -1,0 +1,24 @@
+<section>
+    <article>
+        <h3>Data Binging</h3>
+        <div>Selecione uma classe</div>
+        <select #classe (change)="0">
+            <option value="alert-success">Sucess</option>
+            <option value="alert-info">Info</option>
+            <option value="alert-warning">Warning</option>
+            <option value="alert-danger">Error</option>
+        </select>
+        <br><br>
+
+        <div class="alert" role="alert"
+            [class.alert-success]="classe.value === 'alert-success'">Sucess</div>
+        <div class="alert" role="alert"
+            [class.alert-info]="classe.value === 'alert-info'">Info</div>
+        <div class="alert" role="alert"
+            [class.alert-warning]="classe.value === 'alert-warning'">Warning
+        </div>
+        <div class="alert" role="alert"
+            [class.alert-danger]="classe.value === 'alert-danger'">Error
+        </div>
+    </article>
+</section>
