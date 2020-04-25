@@ -1,3 +1,4 @@
+import { SettingsService } from './settings.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 
@@ -17,9 +18,15 @@ import { CamelCasePipe } from './camel-case.pipe';
     AppRoutingModule
   ],
   providers: [
-    {
+    /*{
       provide: LOCALE_ID,
       useValue: 'en-US',
+    }*/
+    SettingsService,
+    {
+      provide: LOCALE_ID,
+      deps: [SettingsService],
+      useFactory: (settingsService) => settingsService.getLocale()
     }
   ],
   bootstrap: [AppComponent]
