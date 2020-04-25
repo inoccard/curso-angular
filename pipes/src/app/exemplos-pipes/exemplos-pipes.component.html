@@ -4,7 +4,7 @@
 <p><b>Stars: </b> {{book.rating | number:'2.1-2' }}</p>
 <p><b>Pages: </b> {{book.pageNumber | number}}</p>
 <p><b>Price: </b> {{book.price | currency:'BRL':true}}</p>
-<p><b>Date: </b> {{book.date | date:'dd-MM-yyyy'}}</p>
+<p><b>Date: </b> {{book.date | date}}</p>
 <p><b>Url: </b> {{book.url}}</p>
 <br>
 <p><b>Livro</b>{{book | json}}</p>
