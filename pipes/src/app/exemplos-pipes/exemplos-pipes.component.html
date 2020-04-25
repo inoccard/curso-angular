@@ -1,6 +1,6 @@
 <h4>Pipe Examples</h4>
 
-<p><b>Title: </b> {{book.title | uppercase}}</p>
+<p><b>Title: </b> {{book.title | uppercase | lowercase | camelCase}}</p>
 <p><b>Stars: </b> {{book.rating | number:'2.1-2' }}</p>
 <p><b>Pages: </b> {{book.pageNumber | number}}</p>
 <p><b>Price: </b> {{book.price | currency:'BRL':true}}</p>
