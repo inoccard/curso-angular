@@ -8,6 +8,6 @@ export class LogService {
   constructor() { }
 
   ConsoleLog(msg: string) {
-    console.log(msg)
+    console.log(msg);
   }
 }
